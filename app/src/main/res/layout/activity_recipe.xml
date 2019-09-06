@@ -15,14 +15,26 @@
         android:textSize="50sp"
         app:layout_constraintTop_toTopOf="parent"
         />
-    <ImageView
-        android:id="@+id/container"
-        app:layout_constraintTop_toBottomOf="@id/recipe_title"
+
+
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:background="@color/colorPrimaryDark"/>
+        android:layout_height="400dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_title"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        />
+
     <LinearLayout
-        app:layout_constraintTop_toBottomOf="@id/container"
+        app:layout_constraintTop_toBottomOf="@id/player_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

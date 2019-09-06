@@ -1,6 +1,7 @@
 package com.example.yummio.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ public class DessertAdapter extends RecyclerView.Adapter<DessertAdapter.DessertA
     private final DessertAdapterOnClickHandler mClickHandler;
 
     public interface DessertAdapterOnClickHandler{
-        void onClick(String dessertName);
+        void onClick(Dessert dessert);
     }
 
     public DessertAdapter(DessertAdapterOnClickHandler clickHandler){
@@ -74,8 +75,8 @@ public class DessertAdapter extends RecyclerView.Adapter<DessertAdapter.DessertA
         @Override
         public void onClick(View view) {
             int adapterPosition = getAdapterPosition();
-            String dessertName = listDessert.get(adapterPosition).getName();
-            mClickHandler.onClick(dessertName);
+            Log.v("Baking App", "Onclick 1");
+            mClickHandler.onClick(listDessert.get(adapterPosition));
         }
     }
 
